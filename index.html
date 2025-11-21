@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says - Juego</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="encabezado__contenedor">
+            <h1 class="encabezado__titulo">Simon Says</h1>
+
+            <nav class="navegacion-principal">
+                <a class="navegacion-principal__enlace" href="index.html">Juego</a>
+                <a class="navegacion-principal__enlace" href="contacto.html">Contacto</a>
+                <a class="navegacion-principal__enlace" href="https://github.com/tu-usuario/tu-repo"
+                   target="_blank" rel="noopener noreferrer">
+                    Repositorio
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenido-principal">
+        <!-- Panel de jugador -->
+        <section class="panel-jugador">
+            <h2 class="panel-jugador__titulo">Datos del jugador</h2>
+
+            <form class="formulario-jugador" id="formulario-jugador">
+                <label class="formulario-jugador__label" for="nombre-jugador">
+                    Nombre del jugador
+                </label>
+                <input
+                    class="formulario-jugador__input"
+                    type="text"
+                    id="nombre-jugador"
+                    name="nombre-jugador"
+                    autocomplete="off"
+                    required
+                >
+                <p class="formulario-jugador__ayuda">
+                    Debe tener al menos 3 letras.
+                </p>
+
+                <p class="formulario-jugador__error" id="error-nombre-jugador"></p>
+
+                <button
+                    class="formulario-jugador__boton"
+                    type="submit"
+                    id="boton-iniciar"
+                >
+                    Iniciar partida
+                </button>
+            </form>
+        </section>
+        <!-- Panel de juego -->
+        <section class="panel-juego">
+            <h2 class="panel-juego__titulo">Tablero</h2>
+
+            <div class="panel-juego__informacion">
+                <div class="panel-juego__dato">
+                    <span class="panel-juego__etiqueta">Jugador:</span>
+                    <span class="panel-juego__valor" id="jugador-actual">---</span>
+                </div>
+
+                <div class="panel-juego__dato">
+                    <span class="panel-juego__etiqueta">Nivel:</span>
+                    <span class="panel-juego__valor" id="nivel-actual">0</span>
+                </div>
+
+                <div class="panel-juego__dato">
+                    <span class="panel-juego__etiqueta">Puntaje:</span>
+                    <span class="panel-juego__valor" id="puntaje-actual">0</span>
+                </div>
+            </div>
+
+            <div class="tablero-colores" id="tablero-colores">
+                <button
+                    class="boton-color boton-color--verde"
+                    type="button"
+                    id="color-verde"
+                    data-color="verde"
+                ></button>
+
+                <button
+                    class="boton-color boton-color--rojo"
+                    type="button"
+                    id="color-rojo"
+                    data-color="rojo"
+                ></button>
+
+                <button
+                    class="boton-color boton-color--amarillo"
+                    type="button"
+                    id="color-amarillo"
+                    data-color="amarillo"
+                ></button>
+
+                <button
+                    class="boton-color boton-color--azul"
+                    type="button"
+                    id="color-azul"
+                    data-color="azul"
+                ></button>
+            </div>
+
+            <div class="panel-juego__controles">
+                <button
+                    class="panel-juego__boton"
+                    type="button"
+                    id="boton-reiniciar"
+                >
+                    Reiniciar partida
+                </button>
+
+                <button
+                    class="panel-juego__boton"
+                    type="button"
+                    id="boton-ranking"
+                >
+                    Ver ranking
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Game Over -->
+    <div class="modal" id="modal-game-over" aria-hidden="true">
+        <div class="modal__contenido">
+            <h2 class="modal__titulo">Fin de la partida</h2>
+            <p class="modal__texto" id="mensaje-game-over">
+                Te has equivocado en la secuencia.
+            </p>
+            <button
+                class="modal__boton"
+                type="button"
+                id="boton-modal-reiniciar"
+            >
+                Jugar de nuevo
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal de Ranking (para los deseables) -->
+    <div class="modal" id="modal-ranking" aria-hidden="true">
+        <div class="modal__contenido modal__contenido--ranking">
+            <h2 class="modal__titulo">Ranking de partidas</h2>
+
+            <div class="ranking-controles">
+                <button
+                    class="ranking-controles__boton"
+                    type="button"
+                    id="ordenar-por-puntaje"
+                >
+                    Ordenar por puntaje
+                </button>
+                <button
+                    class="ranking-controles__boton"
+                    type="button"
+                    id="ordenar-por-fecha"
+                >
+                    Ordenar por fecha
+                </button>
+            </div>
+
+            <table class="tabla-ranking" id="tabla-ranking">
+                <thead class="tabla-ranking__encabezado">
+                    <tr>
+                        <th>Jugador</th>
+                        <th>Puntaje</th>
+                        <th>Nivel</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody class="tabla-ranking__cuerpo" id="cuerpo-tabla-ranking">
+                    
+                </tbody>
+            </table>
+
+            <button
+                class="modal__boton modal__boton--cerrar"
+                type="button"
+                id="cerrar-modal-ranking"
+            >
+                Cerrar
+            </button>
+        </div>
+    </div>
+
+    <footer class="pie-pagina">
+        <p class="pie-pagina__texto">
+            Trabajo Final - Introducción Web 2025
+        </p>
+    </footer>
+
+    <script src="js/juego-simon.js"></script>
+    <script src="js/ui-juego.js"></script>
+</body>
+</html>

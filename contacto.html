@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Simon Says</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="encabezado__contenedor">
+            <h1 class="encabezado__titulo">Simon Says</h1>
+
+            <nav class="navegacion-principal">
+                <a class="navegacion-principal__enlace" href="index.html">Juego</a>
+                <a class="navegacion-principal__enlace" href="contacto.html">Contacto</a>
+                <a class="navegacion-principal__enlace" href="https://github.com/tu-usuario/tu-repo"
+                   target="_blank" rel="noopener noreferrer">
+                    Repositorio
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenido-principal contenido-principal--contacto">
+        <section class="contacto">
+            <h2 class="contacto__titulo">Contacto</h2>
+            <p class="contacto__descripcion">
+                Si querés enviar dudas o comentarios sobre el juego, completá el formulario.
+            </p>
+
+            <form class="formulario-contacto" id="formulario-contacto">
+                <label class="formulario-contacto__label" for="contacto-nombre">
+                    Nombre
+                </label>
+                <input
+                    class="formulario-contacto__input"
+                    type="text"
+                    id="contacto-nombre"
+                    name="nombre"
+                    autocomplete="off"
+                    required
+                >
+                <p class="formulario-contacto__ayuda">
+                    Solo caracteres alfanuméricos.
+                </p>
+
+                <label class="formulario-contacto__label" for="contacto-email">
+                    Correo electrónico
+                </label>
+                <input
+                    class="formulario-contacto__input"
+                    type="email"
+                    id="contacto-email"
+                    name="email"
+                    autocomplete="off"
+                    required
+                >
+
+                <label class="formulario-contacto__label" for="contacto-mensaje">
+                    Mensaje
+                </label>
+                <textarea
+                    class="formulario-contacto__textarea"
+                    id="contacto-mensaje"
+                    name="mensaje"
+                    rows="4"
+                    required
+                ></textarea>
+                <p class="formulario-contacto__ayuda">
+                    Debe tener más de 5 caracteres.
+                </p>
+
+                <p class="formulario-contacto__error" id="error-contacto"></p>
+
+                <button
+                    class="formulario-contacto__boton"
+                    type="submit"
+                    id="boton-enviar-contacto"
+                >
+                    Enviar mensaje
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <p class="pie-pagina__texto">
+            Trabajo práctico - Introducción Web 2025
+        </p>
+    </footer>
+
+    <script src="js/contacto.js"></script>
+</body>
+</html>
