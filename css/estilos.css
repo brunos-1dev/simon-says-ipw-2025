@@ -1,0 +1,374 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #f9fafb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ENCABEZADO Y NAVEGACIÓN */
+.encabezado {
+    background-color: #020617;
+}
+
+.encabezado-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.encabezado-titulo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.navegacion-principal-enlace {
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: #111827;
+    font-size: 14px;
+}
+
+.navegacion-principal-enlace:hover {
+    background-color: #1f2937;
+}
+
+/* CONTENIDO PRINCIPAL */
+.contenido-principal {
+    flex: 1;
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Variante para la página de contacto (centrar y hacerla más angosta) */
+.contenido-principal-contacto {
+    max-width: 600px;
+}
+
+/* PANEL JUGADOR / PANEL JUEGO / CONTACTO */
+.panel-jugador,
+.panel-juego,
+.contacto {
+    background-color: #020617;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.5);
+}
+
+.panel-jugador-titulo,
+.panel-juego-titulo,
+.contacto-titulo {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.contacto-descripcion {
+    font-size: 14px;
+    margin-bottom: 16px;
+    color: #e5e7eb;
+}
+
+/* FORMULARIO JUGADOR */
+.formulario-jugador {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulario-jugador-label {
+    font-size: 14px;
+}
+
+.formulario-jugador-input {
+    margin-top: 4px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #1f2937;
+    background-color: #020617;
+    color: #f9fafb;
+}
+
+.formulario-jugador-input:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 1px;
+}
+
+.formulario-jugador-ayuda {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.formulario-jugador-error {
+    min-height: 16px;
+    font-size: 12px;
+    color: #f97373;
+}
+
+/* FORMULARIO CONTACTO */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulario-contacto-label {
+    font-size: 14px;
+}
+
+.formulario-contacto-input,
+.formulario-contacto-textarea {
+    margin-top: 4px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #1f2937;
+    background-color: #020617;
+    color: #f9fafb;
+}
+
+.formulario-contacto-input:focus,
+.formulario-contacto-textarea:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 1px;
+}
+
+.formulario-contacto-ayuda {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.formulario-contacto-error {
+    min-height: 16px;
+    font-size: 12px;
+    color: #f97373;
+}
+
+/* BOTONES GENERALES */
+.formulario-jugador-boton,
+.panel-juego-boton,
+.formulario-contacto-boton,
+.modal-boton,
+.ranking-controles-boton,
+.modal-boton-cerrar {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #3b82f6;
+    color: #f9fafb;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario-jugador-boton:hover,
+.panel-juego-boton:hover,
+.formulario-contacto-boton:hover,
+.modal-boton:hover,
+.ranking-controles-boton:hover,
+.modal-boton-cerrar:hover {
+    background-color: #2563eb;
+}
+
+/* INFO DE JUEGO (JUGADOR / NIVEL / PUNTAJE) */
+.panel-juego-informacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.panel-juego-dato {
+    background-color: #111827;
+    border-radius: 8px;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+.panel-juego-etiqueta {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.panel-juego-valor {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* TABLERO DE COLORES */
+.tablero-colores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.boton-color {
+    flex: 1 1 calc(50% - 12px);
+    height: 120px;
+    border-radius: 12px;
+    border: none;
+    opacity: 0.9;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+/* Colores del juego en HEX */
+.boton-color-verde {
+    background-color: #22c55e;
+}
+
+.boton-color-rojo {
+    background-color: #ef4444;
+}
+
+.boton-color-amarillo {
+    background-color: #eab308;
+}
+
+.boton-color-azul {
+    background-color: #3b82f6;
+}
+
+.boton-color:hover {
+    opacity: 1;
+}
+
+/* Clase que usaremos para "iluminar" el botón desde JS */
+.boton-color-activo {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* CONTROLES BAJO EL TABLERO */
+.panel-juego-controles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* MODALES (GAME OVER Y RANKING) */
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 1000;
+}
+
+/* Cuando queramos mostrar el modal, desde JS le agregaremos esta clase */
+.modal-visible {
+    display: flex;
+}
+
+.modal-contenido {
+    background-color: #020617;
+    border-radius: 12px;
+    padding: 20px 24px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-contenido-ranking {
+    max-width: 700px;
+}
+
+.modal-titulo {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.modal-texto {
+    font-size: 14px;
+    color: #e5e7eb;
+}
+
+.modal-boton {
+    margin-top: 8px;
+}
+
+/* RANKING */
+.ranking-controles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tabla-ranking {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.tabla-ranking-encabezado th {
+    text-align: left;
+    padding: 8px;
+    background-color: #0b1120;
+}
+
+.tabla-ranking-cuerpo td {
+    padding: 8px;
+    border-top: 1px solid #1f2937;
+}
+
+/* PIE DE PÁGINA */
+.pie-pagina {
+    background-color: #020617;
+    padding: 10px 16px;
+    text-align: center;
+}
+
+.pie-pagina-texto {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* RESPONSIVE (MEDIA QUERIES AL FINAL) */
+@media (min-width: 768px) {
+    .encabezado-contenedor {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 900px) {
+    .contenido-principal {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .panel-jugador {
+        flex: 0 0 320px;
+    }
+
+    .panel-juego {
+        flex: 1;
+    }
+}
