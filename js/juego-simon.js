@@ -1,7 +1,6 @@
 'use strict';
 
 // Variables globales del juego
-
 var coloresDisponibles = ['verde', 'rojo', 'amarillo', 'azul'];
 var secuenciaJuego = [];
 var indiceJugador = 0;
@@ -11,7 +10,6 @@ var puntajeActual = 0;
 var puedeJugar = false;  
 
 // Funciones de lógica del juego
-
 function iniciarNuevoJuego(nombre) {
     nombreJugador = nombre;
     secuenciaJuego = [];
@@ -19,7 +17,6 @@ function iniciarNuevoJuego(nombre) {
     nivelActual = 0;
     puntajeActual = 0;
     puedeJugar = false;
-
     agregarNuevoColor();
 }
 
@@ -82,7 +79,6 @@ function registrarJugadaJugador(color) {
 }
 
 // Funciones de lectura del estado
-
 function obtenerNombreJugador() {
     return nombreJugador;
 }

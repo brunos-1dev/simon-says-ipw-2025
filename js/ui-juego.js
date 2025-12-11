@@ -21,7 +21,6 @@ var idIntervaloSecuencia = null;
 var cuerpoTablaRanking;
 var CLAVE_RESULTADOS = 'simonSaysResultados';
 
-
 // Inicialización cuando carga el DOM
 document.addEventListener('DOMContentLoaded', function () {
     formularioJugador = document.getElementById('formulario-jugador');
@@ -85,6 +84,7 @@ function manejarSubmitJugador(evento) {
     limpiarErrorNombre();
     iniciarNuevoJuego(nombre);
     actualizarDatosEnPantalla();
+    formularioJugador.reset();
     reproducirSecuencia();
 }
 
@@ -241,7 +241,6 @@ function mostrarModalGameOver(resultado) {
 }
 
 // Ranking con LocalStorage
-
 function obtenerResultadosGuardados() {
     var texto;
     var lista;

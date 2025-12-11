@@ -8,7 +8,6 @@ var inputContactoMensaje;
 var errorContacto;
 var destinatarioCorreo = 'brunog.soria@gmail.com';
 
-
 // Inicialización cuando carga el DOM
 document.addEventListener('DOMContentLoaded', function () {
     formularioContacto = document.getElementById('formulario-contacto');
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
 // Manejo del submit
 function manejarSubmitContacto(evento) {
     evento.preventDefault();
@@ -30,7 +28,6 @@ function manejarSubmitContacto(evento) {
     var nombre = obtenerValorInput(inputContactoNombre);
     var email = obtenerValorInput(inputContactoEmail);
     var mensaje = obtenerValorInput(inputContactoMensaje);
-
     var mensajesError = [];
 
     if (!validarNombreContacto(nombre)) {
@@ -53,7 +50,6 @@ function manejarSubmitContacto(evento) {
     limpiarErrorContacto();
     enviarMailto(nombre, email, mensaje);
 }
-
 
 // Funciones de validación
 function obtenerValorInput(input) {
@@ -95,7 +91,6 @@ function validarMensajeContacto(mensaje) {
     return mensaje.length > 5;
 }
 
-
 // Manejo de errores en UI
 function mostrarErrorContacto(mensaje) {
     if (errorContacto) {
@@ -107,7 +102,6 @@ function limpiarErrorContacto() {
     mostrarErrorContacto('');
 }
 
-
 // Construcción del mailto
 function enviarMailto(nombre, email, mensaje) {
     var asunto = 'Consulta sobre el juego Simon Says';
@@ -118,6 +112,6 @@ function enviarMailto(nombre, email, mensaje) {
     var enlaceMailto = 'mailto:' + destinatarioCorreo +
         '?subject=' + encodeURIComponent(asunto) +
         '&body=' + encodeURIComponent(cuerpo);
-
+    console.log('MAILTO generado:', enlaceMailto);
     window.location.href = enlaceMailto;
 }
