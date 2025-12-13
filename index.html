@@ -11,7 +11,6 @@
     <header class="encabezado">
         <div class="encabezado-contenedor">
             <h1 class="encabezado-titulo">Simon Says</h1>
-
             <nav class="navegacion-principal">
                 <a class="navegacion-principal-enlace" href="index.html">Juego</a>
                 <a class="navegacion-principal-enlace" href="contacto.html">Contacto</a>
@@ -22,13 +21,10 @@
             </nav>
         </div>
     </header>
-
     <main class="contenido-principal">
-        
         <!-- Panel de jugador -->
         <section class="panel-jugador">
             <h2 class="panel-jugador-titulo">Datos del jugador</h2>
-
             <form class="formulario-jugador" id="formulario-jugador">
                 <label class="formulario-jugador-label" for="nombre-jugador">
                     Nombre del jugador
@@ -44,90 +40,74 @@
                 <p class="formulario-jugador-ayuda">
                     Debe tener al menos 3 letras.
                 </p>
-
                 <p class="formulario-jugador-error" id="error-nombre-jugador"></p>
-
                 <button
                     class="formulario-jugador-boton"
                     type="submit"
-                    id="boton-iniciar"
-                >
+                    id="boton-iniciar">
                     Iniciar partida
                 </button>
             </form>
         </section>
-
         <!-- Panel de juego -->
         <section class="panel-juego">
             <h2 class="panel-juego-titulo">Tablero</h2>
-
             <div class="panel-juego-informacion">
                 <div class="panel-juego-dato">
                     <span class="panel-juego-etiqueta">Jugador:</span>
                     <span class="panel-juego-valor" id="jugador-actual">---</span>
                 </div>
-
                 <div class="panel-juego-dato">
                     <span class="panel-juego-etiqueta">Nivel:</span>
                     <span class="panel-juego-valor" id="nivel-actual">0</span>
                 </div>
-
                 <div class="panel-juego-dato">
                     <span class="panel-juego-etiqueta">Puntaje:</span>
                     <span class="panel-juego-valor" id="puntaje-actual">0</span>
                 </div>
             </div>
-
             <div class="tablero-colores" id="tablero-colores">
                 <button
                     class="boton-color boton-color-verde"
                     type="button"
                     id="color-verde"
-                    data-color="verde"
-                ></button>
-
+                    data-color="verde">
+                </button>
                 <button
                     class="boton-color boton-color-rojo"
                     type="button"
                     id="color-rojo"
                     data-color="rojo"
                 ></button>
-
                 <button
                     class="boton-color boton-color-amarillo"
                     type="button"
                     id="color-amarillo"
-                    data-color="amarillo"
-                ></button>
-
+                    data-color="amarillo">
+                </button>
                 <button
                     class="boton-color boton-color-azul"
                     type="button"
                     id="color-azul"
-                    data-color="azul"
-                ></button>
+                    data-color="azul">
+                </button>
             </div>
-
             <div class="panel-juego-controles">
                 <button
                     class="panel-juego-boton"
                     type="button"
-                    id="boton-reiniciar"
-                >
+                    id="boton-reiniciar">
                     Reiniciar partida
                 </button>
-
                 <button
                     class="panel-juego-boton"
                     type="button"
-                    id="boton-ranking"
-                >
+                    id="boton-ranking">
                     Ver ranking
                 </button>
             </div>
         </section>
     </main>
-
     <!-- Modal de Game Over -->
     <div class="modal" id="modal-game-over" aria-hidden="true">
         <div class="modal-contenido">
@@ -138,18 +118,15 @@
             <button
                 class="modal-boton"
                 type="button"
-                id="boton-modal-reiniciar"
-            >
+                id="boton-modal-reiniciar">
                 Jugar de nuevo
             </button>
         </div>
     </div>
-
     <!-- Modal de Ranking -->
     <div class="modal" id="modal-ranking" aria-hidden="true">
         <div class="modal-contenido modal-contenido-ranking">
             <h2 class="modal-titulo">Ranking de partidas</h2>
-
             <div class="ranking-controles">
                 <button
                     class="ranking-controles-boton"
@@ -164,7 +141,6 @@
                     Ordenar por fecha
                 </button>
             </div>
-
             <table class="tabla-ranking" id="tabla-ranking">
                 <thead class="tabla-ranking-encabezado">
                     <tr>
@@ -174,11 +150,9 @@
                         <th>Fecha</th>
                     </tr>
                 </thead>
-                <tbody class="tabla-ranking-cuerpo" id="cuerpo-tabla-ranking">
-                    
+                <tbody class="tabla-ranking-cuerpo" id="cuerpo-tabla-ranking">  
                 </tbody>
             </table>
-
             <button
                 class="modal-boton modal-boton-cerrar"
                 type="button"
@@ -187,13 +161,11 @@
             </button>
         </div>
     </div>
-
     <footer class="pie-pagina">
         <p class="pie-pagina-texto">
             Trabajo Final - Introducción a la Programación Web 2025
         </p>
     </footer>
-
     <script src="js/juego-simon.js"></script>
     <script src="js/ui-juego.js"></script>
 </body>

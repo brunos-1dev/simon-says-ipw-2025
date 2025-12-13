@@ -22,14 +22,12 @@
             </nav>
         </div>
     </header>
-
     <main class="contenido-principal contenido-principal-contacto">
         <section class="contacto">
             <h2 class="contacto-titulo">Contacto</h2>
             <p class="contacto-descripcion">
                 Si querés enviar dudas o comentarios sobre el juego, completá el formulario.
             </p>
-
             <form class="formulario-contacto" id="formulario-contacto">
                 <label class="formulario-contacto-label" for="contacto-nombre">
                     Nombre
@@ -40,12 +38,10 @@
                     id="contacto-nombre"
                     name="nombre"
                     autocomplete="off"
-                    required
-                >
+                    required >
                 <p class="formulario-contacto-ayuda">
                     Solo caracteres alfanuméricos.
                 </p>
-
                 <label class="formulario-contacto-label" for="contacto-email">
                     Correo electrónico
                 </label>
@@ -55,9 +51,7 @@
                     id="contacto-email"
                     name="email"
                     autocomplete="off"
-                    required
-                >
-
+                    required>
                 <label class="formulario-contacto-label" for="contacto-mensaje">
                     Mensaje
                 </label>
@@ -66,31 +60,26 @@
                     id="contacto-mensaje"
                     name="mensaje"
                     rows="4"
-                    required
-                ></textarea>
+                    required>
+                </textarea>
                 <p class="formulario-contacto-ayuda">
                     Debe tener más de 5 caracteres.
                 </p>
-
                 <p class="formulario-contacto-error" id="error-contacto"></p>
-
                 <button
                     class="formulario-contacto-boton"
                     type="submit"
-                    id="boton-enviar-contacto"
-                >
+                    id="boton-enviar-contacto">
                     Enviar mensaje
                 </button>
             </form>
         </section>
     </main>
-
     <footer class="pie-pagina">
         <p class="pie-pagina-texto">
             Trabajo Final - Introducción a la Programación Web 2025
         </p>
     </footer>
-
     <script src="js/contacto.js"></script>
 </body>
 </html>
